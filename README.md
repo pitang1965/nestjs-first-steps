@@ -45,6 +45,29 @@ $ pnpm run start:dev
 $ pnpm run start:prod
 ```
 
+## 関連資料
+
+* Auth0の公式ドキュメント
+  * メインページ: https://auth0.com/docs/
+  * Node.js SDKガイド: https://auth0.com/docs/quickstart/backend/nodejs
+  * Express.jsでのAuth0使用ガイド（NestJSはExpressベース）: https://auth0.com/docs/quickstart/backend/nodejs/01-authorization
+
+
+* NestJSの公式ドキュメント
+  * メインページ: https://docs.nestjs.com/
+  * 認証関連: https://docs.nestjs.com/security/authentication
+  * ガード（認証に使用）: https://docs.nestjs.com/guards
+
+* NestJSとAuth0の統合に関する情報:
+  * NestJSでのPassport使用（Auth0と組み合わせ可能）: https://docs.nestjs.com/security/authentication#implementing-passport-strategies
+
+* Auth0のNode.js関連GitHub
+  * Auth0 Node.js SDK: https://github.com/auth0/node-auth0
+
+*  Auth0のコミュニティとサポート
+  * Auth0コミュニティ: https://community.auth0.com/
+  * NestJSフォーラム（Auth0関連の質問も可能）: https://github.com/nestjs/nest/discussions
+
 ## Test
 
 ```bash
