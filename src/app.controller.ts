@@ -1,5 +1,6 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, UseGuards } from '@nestjs/common';
 import { AppService } from './app.service';
+import { Auth0Guard } from './auth/auth0.guard';
 
 @Controller()
 export class AppController {
@@ -13,5 +14,11 @@ export class AppController {
   @Get('public')
   getPublic(): string {
     return this.appService.getPublic();
+  }
+
+  @Get('private')
+  @UseGuards(Auth0Guard)
+  getPrivate() {
+    return { message: 'This is protected data' };
   }
 }

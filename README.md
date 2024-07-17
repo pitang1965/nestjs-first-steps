@@ -45,6 +45,17 @@ $ pnpm run start:dev
 $ pnpm run start:prod
 ```
 
+## curlによるAPIのテスト
+
+* 下記のトークンはAuth0のダッシュボード Applications → APIsのTestタブから得られる。
+
+```
+$ curl --request GET \
+--url 'http://localhost:3000/private' \
+--header 'Authorization: Bearer ＜トークン＞'
+{"message":"This is protected data"}
+```
+
 ## 関連資料
 
 * Auth0の公式ドキュメント
