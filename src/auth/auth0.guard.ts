@@ -5,7 +5,7 @@ import {
   UnauthorizedException,
 } from '@nestjs/common';
 import { Observable } from 'rxjs';
-import { auth, UnauthorizedError } from 'express-oauth2-jwt-bearer';
+import { auth } from 'express-oauth2-jwt-bearer';
 
 @Injectable()
 export class Auth0Guard implements CanActivate {
