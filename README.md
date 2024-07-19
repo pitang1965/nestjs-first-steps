@@ -51,7 +51,7 @@ $ pnpm run start:prod
 
 ```
 $ curl --request GET \
---url 'http://localhost:3000/private' \
+--url 'http://localhost:3001/private' \
 --header 'Authorization: Bearer ＜トークン＞'
 {"message":"This is protected data"}
 ```
