@@ -24,12 +24,13 @@ export class Auth0Guard implements CanActivate {
     return new Promise((resolve, reject) => {
       this.checkJwt(req, res, (err) => {
         if (err) {
-          console.log('Auth error:', err);
-          reject(new UnauthorizedException({
-            message: err.message,
-            status: err.status,
-            code: err.code
-          }));
+          reject(
+            new UnauthorizedException({
+              message: err.message,
+              status: err.status,
+              code: err.code,
+            }),
+          );
         } else {
           resolve(true);
         }
