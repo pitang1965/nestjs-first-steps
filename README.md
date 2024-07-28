@@ -45,6 +45,12 @@ $ pnpm run start:dev
 $ pnpm run start:prod
 ```
 
+## 環境変数
+
+AUTH0_DOMAIN=xxx.auth0.com
+AUTH0_AUDIENCE=https://api.xxx.com
+ALLOWED_ORIGINS=http://localhost:3000,https://yourdomain.com
+
 ## curlによるAPIのテスト
 
 * 下記のトークンはAuth0のダッシュボード Applications → APIsのTestタブから得られる。
