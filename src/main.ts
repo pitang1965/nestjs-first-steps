@@ -5,7 +5,11 @@ import { AuthExceptionFilter } from './filters/auth-exception.filter';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  const allowedOrigins = process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000'];
+  const allowedOrigins = process.env.ALLOWED_ORIGINS?.split(',');
+
+  if (!allowedOrigins || allowedOrigins.length === 0) {
+    throw new Error('ALLOWED_ORIGINS environment variable is not set or is empty');
+  }
 
   app.enableCors({
     origin: allowedOrigins,
